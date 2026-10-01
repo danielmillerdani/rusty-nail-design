@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import Lenis from "lenis";
 import gsap from "gsap";
@@ -85,7 +85,7 @@ function Brand({ light = false }: { light?: boolean }) {
   );
 }
 
-function Action({ href, children, kind = "primary", onClick }: { href: string; children: React.ReactNode; kind?: "primary" | "outline" | "light"; onClick?: () => void }) {
+function Action({ href, children, kind = "primary", onClick }: { href: string; children: ReactNode; kind?: "primary" | "outline" | "light"; onClick?: () => void }) {
   return <a href={href} onClick={onClick} className={`action action-${kind}`}>{children}<ArrowUp aria-hidden="true" /></a>;
 }
 
@@ -191,7 +191,7 @@ function Services() {
               <div className="service-number">{service.number}</div>
               <div className="service-content"><h3>{service.title}</h3><p>{service.copy}</p></div>
               <a href="#contact" aria-label={`Discuss ${service.title}`}><ArrowDownRight /></a>
-              <i style={{ transitionDelay: `${index * 20}ms` }} />
+              <i className={`service-line service-line-${index + 1}`} />
             </motion.article>
           ))}
         </div>
