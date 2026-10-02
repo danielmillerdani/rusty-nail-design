@@ -152,7 +152,7 @@ function Hero() {
         <p className="eyebrow">{"\n"}</p>
         <h1><span>Transform Your Home.</span><span>Built Around You.</span></h1>
         <div className="type-line"><span>Specializing in</span><AnimatePresence mode="wait"><motion.strong key={phrase} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }}>{phrases[phrase]}</motion.strong></AnimatePresence></div>
-        <p className="hero-copy">Professional craftsmanship that turns everyday rooms into beautiful, functional spaces—thoughtfully built for the way you live.</p>
+        <p className="hero-copy">Professional craftsmanship that turns everyday rooms into beautiful, functional spaces thoughtfully built for the way you live.</p>
         <div className="hero-actions"><Action href="#contact">Get a Free Estimate</Action><Action href="#services" kind="light">Explore Our Services</Action></div>
         <a className="hero-phone" href="tel:+18102754547"><Phone aria-hidden="true" /> Call (810) 275-4547</a>
       </div>
@@ -232,7 +232,7 @@ function Materials() {
   return (
     <section className="section materials-section">
       <div className="section-shell">
-        <div className="materials-head reveal"><p className="eyebrow eyebrow-dark">Surface / Structure / Finish</p><h2>Materials <em>Matter.</em></h2><p>We work with durable, quality materials chosen to create beautiful, long-lasting results.</p></div>
+        <div className="materials-head reveal"><p className="eyebrow eyebrow-dark">Surface / Structure / Finish</p><h2>Materials <em>Matter.</em></h2><p>We work with durable, quality materials chosen to create beautiful, long lasting results.</p></div>
         <div className="material-grid">{materials.map((material, index) => <article className={`material-card material-${index + 1}`} key={material.name}><img src={material.image} loading="lazy" width={1600} height={1200} alt={`Close-up representing ${material.name}`} /><div><span>{material.type}</span><h3>{material.name}</h3></div></article>)}</div>
         <div className="certified-callout reveal"><div className="certified-badge"><ShieldCheck /><span>Certified<br />Installer</span></div><div><p>Outdoor living, built with trusted materials.</p><h3>AZEK <i>+</i> TIMBERTECH</h3></div><Action href="#contact" kind="outline">Discuss Your Deck</Action></div>
       </div>
