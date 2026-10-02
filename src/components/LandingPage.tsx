@@ -149,7 +149,7 @@ function Hero() {
       <div className="hero-shade" />
       <div className="architectural-grid" aria-hidden="true" />
       <div className="hero-content reveal-group">
-        <p className="eyebrow">Genesee County's Residential Remodeling Experts</p>
+        <p className="eyebrow">{"\n"}</p>
         <h1><span>Transform Your Home.</span><span>Built Around You.</span></h1>
         <div className="type-line"><span>Specializing in</span><AnimatePresence mode="wait"><motion.strong key={phrase} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }}>{phrases[phrase]}</motion.strong></AnimatePresence></div>
         <p className="hero-copy">Professional craftsmanship that turns everyday rooms into beautiful, functional spaces—thoughtfully built for the way you live.</p>
